@@ -19,11 +19,17 @@ Postal address have a street name
 Postal address have a ZIP code
 Postal address have a city
 Postal address may have optional field
+## Business management
+A business is created by a user
+A business is owned by a user
+A business have a SIRET
+A business have an APE code
+A business have a tax code
+A business can have a logo
+Businesses are only visible by their owner 
 ## Estimate management
 
 ## Customer management
-
-## Business management
 
 ## Invoice management
 
