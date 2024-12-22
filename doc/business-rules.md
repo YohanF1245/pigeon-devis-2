@@ -46,5 +46,12 @@ An estimate have a state (emitted or accepted)
 An estimate have an expiration date
 An estimate have an expected delivery time
 ## Customer management
-
+A user can create, update or edit a customer
+A customer can be a professionnal or individual
+A professionnal customer have a business name (required)
+An individual customer have a first name (required)
+An individual customer have a last name (required)
+A customer have a mail (optional)
+A customer have a phone number (optional)
+A customer have a postal address (optional)
 ## Invoice management
