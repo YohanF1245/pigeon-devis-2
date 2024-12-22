@@ -28,10 +28,13 @@ A business have an APE code
 A business have a tax code
 A business can have a logo
 Businesses are only visible by their owner 
+## Performance management
+A performance can be a service provided or a good sold
+A performance is related to a company
+A performance have a price
+A performance can be created, edited or deleted by a business owner
 ## Estimate management
 
 ## Customer management
 
 ## Invoice management
-
-## Performance management
