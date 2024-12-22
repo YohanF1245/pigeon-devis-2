@@ -7,6 +7,14 @@ User email must not be already used
 A user must input a valid password to create an account
 Account must be verified by mail confirmation
 User cant request a password reset link
+## Dashboard management
+The dashboard shows globals statistics about the business activities
+The dashboard has a graph showing income and outcome.
+Income is splitted between money from emitted invoice, emitted estimate or paid invoice.
+The dashboard shows notification about number of estimate not paid on time
+The dashboard shows notification about number of invoices not paid on time
+The dashboard show the five last invoices, estimates and expense in a table
+The dashboard shows a balance with income and outcome
 ## Profile management
 A user has a first name (required)
 A user has a last name (required)
