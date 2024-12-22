@@ -1,5 +1,16 @@
 # Business rules
+## Table of Contents
 
+- [Account management](#account-management)
+- [Dashboard management](#dashboard-management)
+- [Profile management](#profile-management)
+- [Postal address management](#postal-address-management)
+- [Business management](#business-management)
+- [Performance management](#performance-management)
+- [Estimate management](#estimate-management)
+- [Customer management](#customer-management)
+- [Invoice management](#invoice-management)
+- [Expense management](#expense-management)
 ## Account management
 - B.R. 1: A user must be logged in to use the software
 - B.R. 2: A user must input a valid email to create an account
