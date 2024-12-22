@@ -8,50 +8,57 @@ A user must input a valid password to create an account
 Account must be verified by mail confirmation
 User cant request a password reset link
 ## Profile management
-A user have a first name (required)
-A user have a last name (required)
-A user have a email address (required)
-A user have a phone number (not required)
-A user have a postal adress (not required)
+A user has a first name (required)
+A user has a last name (required)
+A user has a email address (required)
+A user has a phone number (not required)
+A user has a postal adress (not required)
 A user with an associated business is a business owner
 A user can upload his signature
 ## Postal adress management
-Postal address have a street number
-Postal address have a street name
-Postal address have a ZIP code
-Postal address have a city
-Postal address may have optional field
+Postal address has a street number
+Postal address has a street name
+Postal address has a ZIP code
+Postal address has a city
+Postal address may has optional field
 ## Business management
 A business is created by a user
 A business is owned by a user
-A business have a SIRET
-A business have an APE code
-A business have a tax code
-A business can have a logo
+A business has a SIRET
+A business has an APE code
+A business has a tax code
+A business can has a logo
 Businesses are only visible by their owner 
 ## Performance management
 A performance can be a service provided or a good sold
 A performance is related to a company
-A performance have a price
+A performance has a price
 A performance can be created, edited or deleted by a business owner
 A performance is associated with a tax
 ## Estimate management
 An estimate can be created, edited or deleted by a business owner
-An estimate have at leat one perfomance associated
-An estimate can have the same performance associated multiple times
-An estimate have a customer
-An estimate have a creation date
-An estimate may have a discount
-An estimate have a state (emitted or accepted)
-An estimate have an expiration date
-An estimate have an expected delivery time
+An estimate has at leat one perfomance associated
+An estimate can has the same performance associated multiple times
+An estimate has a customer
+An estimate has a creation date
+An estimate may has a discount
+An estimate has a state (emitted or accepted)
+An estimate has an expiration date
+An estimate has an expected delivery time
 ## Customer management
 A user can create, update or edit a customer
 A customer can be a professionnal or individual
-A professionnal customer have a business name (required)
-An individual customer have a first name (required)
-An individual customer have a last name (required)
-A customer have a mail (optional)
-A customer have a phone number (optional)
-A customer have a postal address (optional)
+A professionnal customer has a business name (required)
+An individual customer has a first name (required)
+An individual customer has a last name (required)
+A customer has a mail (optional)
+A customer has a phone number (optional)
+A customer has a postal address (optional)
 ## Invoice management
+A business owner can create, update or edit an invoice
+An invoice requires an approuved estimate
+An invoice has two states (emitted or paid)
+An invoice has a price surcharge (set by default to zero)
+An invoice has a payment limit date
+An invoice has a payment date
+An invoice has a creation date
