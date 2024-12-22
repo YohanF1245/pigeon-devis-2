@@ -34,6 +34,7 @@ A performance can be a service provided or a good sold
 A performance is related to a company
 A performance have a price
 A performance can be created, edited or deleted by a business owner
+A performance is associated with a tax
 ## Estimate management
 An estimate can be created, edited or deleted by a business owner
 An estimate have at leat one perfomance associated
