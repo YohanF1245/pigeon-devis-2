@@ -13,6 +13,12 @@ A user have a last name (required)
 A user have a email address (required)
 A user have a phone number (not required)
 A user have a postal adress (not required)
+## Postal adress management
+Postal address have a street number
+Postal address have a street name
+Postal address have a ZIP code
+Postal address have a city
+Postal address may have optional field
 ## Estimate management
 
 ## Customer management
