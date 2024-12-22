@@ -14,6 +14,7 @@ A user have a email address (required)
 A user have a phone number (not required)
 A user have a postal adress (not required)
 A user with an associated business is a business owner
+A user can upload his signature
 ## Postal adress management
 Postal address have a street number
 Postal address have a street name
