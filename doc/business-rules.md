@@ -62,3 +62,8 @@ An invoice has a price surcharge (set by default to zero)
 An invoice has a payment limit date
 An invoice has a payment date
 An invoice has a creation date
+## Expense management
+A business owner can create, update or edit an expense
+An expense has a title
+An expense has a price
+An expense has a date
