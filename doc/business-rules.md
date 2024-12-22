@@ -34,7 +34,15 @@ A performance is related to a company
 A performance have a price
 A performance can be created, edited or deleted by a business owner
 ## Estimate management
-
+An estimate can be created, edited or deleted by a business owner
+An estimate have at leat one perfomance associated
+An estimate can have the same performance associated multiple times
+An estimate have a customer
+An estimate have a creation date
+An estimate may have a discount
+An estimate have a state (emitted or accepted)
+An estimate have an expiration date
+An estimate have an expected delivery time
 ## Customer management
 
 ## Invoice management
