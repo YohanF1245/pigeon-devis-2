@@ -39,9 +39,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 2. Gestion des Prestations
 
 ### Ajout d'une Prestation
-**En tant qu'utilisateur**  
-**Je veux** enregistrer une prestation courante  
-**Afin de** l'utiliser rapidement lors de la création de devis futurs
+En tant qu'utilisateur,  
+je veux enregistrer une prestation courante,  
+afin de l'utiliser rapidement lors de la création de devis futurs.
 
 **Critères d'Acceptation :**
 - Création en < 2 secondes
@@ -51,9 +51,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Validation en temps réel
 
 ### Modification d'une Prestation
-**En tant qu'utilisateur**  
-**Je veux** modifier une prestation existante  
-**Afin de** mettre à jour les informations comme les prix ou descriptions
+En tant qu'utilisateur,  
+je veux modifier une prestation existante,  
+afin de mettre à jour les informations comme les prix ou descriptions.
 
 **Critères d'Acceptation :**
 - Modification en < 2 secondes
@@ -62,9 +62,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Mise à jour en temps réel des devis liés
 
 ### Suppression d'une Prestation
-**En tant qu'utilisateur**  
-**Je veux** supprimer une prestation obsolète  
-**Afin de** maintenir ma base de données à jour
+En tant qu'utilisateur,  
+je veux supprimer une prestation obsolète,  
+afin de maintenir ma base de données à jour.
 
 **Critères d'Acceptation :**
 - Confirmation de suppression
@@ -73,9 +73,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Archivage optionnel
 
 ### Affichage des Prestations
-**En tant qu'utilisateur**  
-**Je veux** voir la liste des prestations  
-**Afin de** sélectionner rapidement celles dont j'ai besoin
+En tant qu'utilisateur,  
+je veux voir la liste des prestations,  
+afin de sélectionner rapidement celles dont j'ai besoin.
 
 **Critères d'Acceptation :**
 - Chargement en < 1 seconde
@@ -84,9 +84,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Tri multi-critères
 
 ### Recherche de Prestations
-**En tant qu'utilisateur**  
-**Je veux** rechercher une prestation par son nom  
-**Afin de** gagner du temps lors de la création d'un devis
+En tant qu'utilisateur,  
+je veux rechercher une prestation par son nom,  
+afin de gagner du temps lors de la création d'un devis.
 
 **Critères d'Acceptation :**
 - Recherche en < 500ms
@@ -97,9 +97,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 3. Gestion des Devis
 
 ### Création d'un Devis
-**En tant qu'utilisateur**  
-**Je veux** créer un devis avec des prestations  
-**Afin de** faire des propositions cohérentes à mes clients
+En tant qu'utilisateur,  
+je veux créer un devis avec des prestations,  
+afin de faire des propositions cohérentes à mes clients.
 
 **Critères d'Acceptation :**
 - Création en < 3 secondes
@@ -109,9 +109,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Glisser-déposer des prestations
 
 ### Édition d'un Devis
-**En tant qu'utilisateur**  
-**Je veux** modifier un devis existant  
-**Afin de** corriger ou mettre à jour les informations
+En tant qu'utilisateur,  
+je veux modifier un devis existant,  
+afin de corriger ou mettre à jour les informations.
 
 **Critères d'Acceptation :**
 - Modification en < 2 secondes
@@ -120,9 +120,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Recalcul automatique des totaux
 
 ### Suppression d'un Devis
-**En tant qu'utilisateur**  
-**Je veux** supprimer un devis  
-**Afin d'**éviter les documents obsolètes
+En tant qu'utilisateur,  
+je veux supprimer un devis,  
+afin d'éviter les documents obsolètes.
 
 **Critères d'Acceptation :**
 - Confirmation de suppression
@@ -131,9 +131,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Traçabilité des suppressions
 
 ### Affichage des Devis
-**En tant qu'utilisateur**  
-**Je veux** voir tous mes devis  
-**Afin de** suivre mes offres clients
+En tant qu'utilisateur,  
+je veux voir tous mes devis,  
+afin de suivre mes offres clients.
 
 **Critères d'Acceptation :**
 - Liste chargée en < 2 secondes
@@ -142,9 +142,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Export des données
 
 ### Recherche de Devis
-**En tant qu'utilisateur**  
-**Je veux** rechercher un devis spécifique  
-**Afin de** retrouver rapidement les informations client/projet
+En tant qu'utilisateur,  
+je veux rechercher un devis spécifique,  
+afin de retrouver rapidement les informations client/projet.
 
 **Critères d'Acceptation :**
 - Recherche en < 1 seconde
@@ -155,9 +155,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 4. Gestion des Factures
 
 ### Création d'une Facture
-**En tant qu'utilisateur**  
-**Je veux** générer une facture depuis un devis accepté  
-**Afin de** demander le paiement au client
+En tant qu'utilisateur,  
+je veux générer une facture depuis un devis accepté,  
+afin de demander le paiement au client.
 
 **Critères d'Acceptation :**
 - Génération en < 2 secondes
@@ -166,9 +166,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Conditions de paiement configurables
 
 ### Édition d'une Facture
-**En tant qu'utilisateur**  
-**Je veux** modifier une facture existante  
-**Afin de** corriger des erreurs avant envoi
+En tant qu'utilisateur,  
+je veux modifier une facture existante,  
+afin de corriger des erreurs avant envoi.
 
 **Critères d'Acceptation :**
 - Modification en < 2 secondes
@@ -177,9 +177,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Recalcul automatique
 
 ### Suppression d'une Facture
-**En tant qu'utilisateur**  
-**Je veux** supprimer une facture invalide  
-**Afin d'**éviter la confusion
+En tant qu'utilisateur,  
+je veux supprimer une facture invalide,  
+afin d'éviter la confusion.
 
 **Critères d'Acceptation :**
 - Confirmation obligatoire
@@ -188,9 +188,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Suppression en < 1 seconde
 
 ### Affichage des Factures
-**En tant qu'utilisateur**  
-**Je veux** voir toutes mes factures  
-**Afin de** suivre les paiements
+En tant qu'utilisateur,  
+je veux voir toutes mes factures,  
+afin de suivre les paiements.
 
 **Critères d'Acceptation :**
 - Chargement en < 2 secondes
@@ -199,9 +199,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Export possible
 
 ### Recherche de Facture
-**En tant qu'utilisateur**  
-**Je veux** chercher une facture par numéro/client  
-**Afin de** gérer efficacement les paiements
+En tant qu'utilisateur,  
+je veux chercher une facture par numéro/client,  
+afin de gérer efficacement les paiements.
 
 **Critères d'Acceptation :**
 - Recherche en < 1 seconde
@@ -212,9 +212,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 5. Gestion des Dépenses
 
 ### Saisie des Dépenses
-**En tant qu'utilisateur**  
-**Je veux** enregistrer les dépenses  
-**Afin de** suivre les coûts opérationnels
+En tant qu'utilisateur,  
+je veux enregistrer les dépenses,  
+afin de suivre les coûts opérationnels.
 
 **Critères d'Acceptation :**
 - Saisie en < 2 secondes
@@ -223,9 +223,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Validation en temps réel
 
 ### Édition d'une Dépense
-**En tant qu'utilisateur**  
-**Je veux** modifier une dépense existante  
-**Afin de** corriger les montants/catégories
+En tant qu'utilisateur,  
+je veux modifier une dépense existante,  
+afin de corriger les montants/catégories.
 
 **Critères d'Acceptation :**
 - Modification en < 2 secondes
@@ -234,9 +234,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Recalcul automatique
 
 ### Suppression d'une Dépense
-**En tant qu'utilisateur**  
-**Je veux** supprimer une dépense  
-**Afin de** maintenir des comptes exacts
+En tant qu'utilisateur,  
+je veux supprimer une dépense,  
+afin de maintenir des comptes exacts.
 
 **Critères d'Acceptation :**
 - Confirmation requise
@@ -245,9 +245,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Traçabilité
 
 ### Affichage des Dépenses
-**En tant qu'utilisateur**  
-**Je veux** voir toutes les dépenses  
-**Afin d'**avoir une vue d'ensemble des coûts
+En tant qu'utilisateur,  
+je veux voir toutes les dépenses,  
+afin d'avoir une vue d'ensemble des coûts.
 
 **Critères d'Acceptation :**
 - Chargement en < 2 secondes
@@ -258,9 +258,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 6. Gestion du Portefeuille Client
 
 ### Ajout d'un Client
-**En tant qu'utilisateur**  
-**Je veux** ajouter un nouveau client  
-**Afin de** créer facilement des devis pour lui
+En tant qu'utilisateur,  
+je veux ajouter un nouveau client,  
+afin de créer facilement des devis pour lui.
 
 **Critères d'Acceptation :**
 - Création en < 2 secondes
@@ -269,9 +269,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Import depuis vCard
 
 ### Édition d'un Client
-**En tant qu'utilisateur**  
-**Je veux** modifier les infos client  
-**Afin de** les maintenir à jour
+En tant qu'utilisateur,  
+je veux modifier les infos client,  
+afin de les maintenir à jour.
 
 **Critères d'Acceptation :**
 - Modification en < 2 secondes
@@ -280,9 +280,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Validation données
 
 ### Suppression d'un Client
-**En tant qu'utilisateur**  
-**Je veux** supprimer un client inactif  
-**Afin de** nettoyer mon portefeuille
+En tant qu'utilisateur,  
+je veux supprimer un client inactif,  
+afin de nettoyer mon portefeuille.
 
 **Critères d'Acceptation :**
 - Vérification des dépendances
@@ -291,9 +291,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Conservation historique
 
 ### Affichage du Portefeuille
-**En tant qu'utilisateur**  
-**Je veux** voir tous mes clients  
-**Afin de** gérer efficacement les relations
+En tant qu'utilisateur,  
+je veux voir tous mes clients,  
+afin de gérer efficacement les relations.
 
 **Critères d'Acceptation :**
 - Chargement en < 2 secondes
@@ -302,9 +302,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Export possible
 
 ### Contact Client
-**En tant qu'utilisateur**  
-**Je veux** contacter rapidement un client  
-**Afin de** communiquer efficacement
+En tant qu'utilisateur,  
+je veux contacter rapidement un client,  
+afin de communiquer efficacement.
 
 **Critères d'Acceptation :**
 - Intégration email en 1 clic
@@ -315,9 +315,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 7. Dashboard Financier
 
 ### Vue d'Ensemble
-**En tant qu'utilisateur**  
-**Je veux** voir mes indicateurs financiers  
-**Afin de** suivre la santé de mon entreprise
+En tant qu'utilisateur,  
+je veux voir mes indicateurs financiers,  
+afin de suivre la santé de mon entreprise.
 
 **Critères d'Acceptation :**
 - Chargement en < 3 secondes
@@ -326,9 +326,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Export des rapports
 
 ### KPIs
-**En tant qu'utilisateur**  
-**Je veux** suivre mes indicateurs clés  
-**Afin d'**organiser mon activité
+En tant qu'utilisateur,  
+je veux suivre mes indicateurs clés,  
+afin d'organiser mon activité.
 
 **Critères d'Acceptation :**
 - Actualisation < 5 minutes
@@ -337,9 +337,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Personnalisation affichage
 
 ### Raccourcis
-**En tant qu'utilisateur**  
-**Je veux** des accès rapides  
-**Afin de** gagner en productivité
+En tant qu'utilisateur,  
+je veux des accès rapides,  
+afin de gagner en productivité.
 
 **Critères d'Acceptation :**
 - Accès en 1 clic
@@ -350,9 +350,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 8. Notifications et Rappels
 
 ### Rappels de Paiement
-**En tant qu'utilisateur**  
-**Je veux** être notifié des impayés  
-**Afin de** relancer les clients
+En tant qu'utilisateur,  
+je veux être notifié des impayés,  
+afin de relancer les clients.
 
 **Critères d'Acceptation :**
 - Notifications temps réel
@@ -361,9 +361,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Historique des relances
 
 ### Alertes Dépenses
-**En tant qu'utilisateur**  
-**Je veux** être alerté des dépassements  
-**Afin de** contrôler les coûts
+En tant qu'utilisateur,  
+je veux être alerté des dépassements,  
+afin de contrôler les coûts.
 
 **Critères d'Acceptation :**
 - Seuils configurables
@@ -374,9 +374,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 9. Exportation et Impression
 
 ### Export Documents
-**En tant qu'utilisateur**  
-**Je veux** exporter en PDF  
-**Afin de** partager professionnellement
+En tant qu'utilisateur,  
+je veux exporter en PDF,  
+afin de partager professionnellement.
 
 **Critères d'Acceptation :**
 - Génération < 5 secondes
@@ -385,9 +385,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Signature numérique
 
 ### Impression
-**En tant qu'utilisateur**  
-**Je veux** imprimer mes documents  
-**Afin d'**avoir des copies physiques
+En tant qu'utilisateur,  
+je veux imprimer mes documents,  
+afin d'avoir des copies physiques.
 
 **Critères d'Acceptation :**
 - Preview avant impression
@@ -398,9 +398,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 10. Sécurité et Confidentialité
 
 ### Gestion Mot de Passe
-**En tant qu'utilisateur**  
-**Je veux** gérer mon mot de passe  
-**Afin de** sécuriser mon compte
+En tant qu'utilisateur,  
+je veux gérer mon mot de passe,  
+afin de sécuriser mon compte.
 
 **Critères d'Acceptation :**
 - Changement sécurisé
@@ -409,9 +409,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Historique des changements
 
 ### Récupération Compte
-**En tant qu'utilisateur**  
-**Je veux** récupérer mon accès  
-**Afin de** ne pas perdre mes données
+En tant qu'utilisateur,  
+je veux récupérer mon accès,  
+afin de ne pas perdre mes données.
 
 **Critères d'Acceptation :**
 - Processus sécurisé
@@ -422,9 +422,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 ## 11. Paramètres Application
 
 ### Personnalisation Documents
-**En tant qu'utilisateur**  
-**Je veux** personnaliser mes documents  
-**Afin de** renforcer mon image de marque
+En tant qu'utilisateur,  
+je veux personnaliser mes documents,  
+afin de renforcer mon image de marque.
 
 **Critères d'Acceptation :**
 - Upload logo
@@ -433,9 +433,9 @@ afin de sécuriser mon compte quand je ne l'utilise pas.
 - Preview en temps réel
 
 ### Gestion des Taxes
-**En tant qu'utilisateur**  
-**Je veux** configurer les taxes  
-**Afin d'**avoir des calculs conformes
+En tant qu'utilisateur,  
+je veux configurer les taxes,  
+afin d'avoir des calculs conformes.
 
 **Critères d'Acceptation :**
 - Multiples taux de TVA
