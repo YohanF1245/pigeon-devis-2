@@ -1,11 +1,11 @@
-# User Stories
+# User Stories et Critères d'Acceptation
 
 ## 1. Gestion des Utilisateurs
 
 ### Enregistrement d'un Utilisateur
-**En tant qu'**utilisateur  
-**Je veux** pouvoir m'enregistrer  
-**Afin de** créer un compte et accéder à l'application
+En tant qu'utilisateur,  
+je veux pouvoir m'enregistrer,  
+afin de créer un compte et accéder à l'application.
 
 **Critères d'Acceptation :**
 - Formulaire d'inscription avec champs requis
@@ -15,9 +15,9 @@
 - Confirmation par email obligatoire
 
 ### Connexion Utilisateur
-**En tant qu'**utilisateur  
-**Je veux** me connecter avec mon email et mot de passe  
-**Afin d'**accéder à mes devis, factures et autres informations
+En tant qu'utilisateur,  
+je veux me connecter avec mon email et mot de passe,  
+afin d'accéder à mes devis, factures et autres informations.
 
 **Critères d'Acceptation :**
 - Connexion en < 1 seconde
@@ -26,9 +26,9 @@
 - Option "Se souvenir de moi"
 
 ### Déconnexion
-**En tant qu'**utilisateur  
-**Je veux** pouvoir me déconnecter  
-**Afin de** sécuriser mon compte quand je ne l'utilise pas
+En tant qu'utilisateur,  
+je veux pouvoir me déconnecter,  
+afin de sécuriser mon compte quand je ne l'utilise pas.
 
 **Critères d'Acceptation :**
 - Déconnexion instantanée
@@ -39,7 +39,7 @@
 ## 2. Gestion des Prestations
 
 ### Ajout d'une Prestation
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** enregistrer une prestation courante  
 **Afin de** l'utiliser rapidement lors de la création de devis futurs
 
@@ -51,7 +51,7 @@
 - Validation en temps réel
 
 ### Modification d'une Prestation
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** modifier une prestation existante  
 **Afin de** mettre à jour les informations comme les prix ou descriptions
 
@@ -62,7 +62,7 @@
 - Mise à jour en temps réel des devis liés
 
 ### Suppression d'une Prestation
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** supprimer une prestation obsolète  
 **Afin de** maintenir ma base de données à jour
 
@@ -73,7 +73,7 @@
 - Archivage optionnel
 
 ### Affichage des Prestations
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** voir la liste des prestations  
 **Afin de** sélectionner rapidement celles dont j'ai besoin
 
@@ -84,7 +84,7 @@
 - Tri multi-critères
 
 ### Recherche de Prestations
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** rechercher une prestation par son nom  
 **Afin de** gagner du temps lors de la création d'un devis
 
@@ -97,7 +97,7 @@
 ## 3. Gestion des Devis
 
 ### Création d'un Devis
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** créer un devis avec des prestations  
 **Afin de** faire des propositions cohérentes à mes clients
 
@@ -109,7 +109,7 @@
 - Glisser-déposer des prestations
 
 ### Édition d'un Devis
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** modifier un devis existant  
 **Afin de** corriger ou mettre à jour les informations
 
@@ -120,9 +120,9 @@
 - Recalcul automatique des totaux
 
 ### Suppression d'un Devis
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** supprimer un devis  
-**Afin d'** éviter les documents obsolètes
+**Afin d'**éviter les documents obsolètes
 
 **Critères d'Acceptation :**
 - Confirmation de suppression
@@ -131,7 +131,7 @@
 - Traçabilité des suppressions
 
 ### Affichage des Devis
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** voir tous mes devis  
 **Afin de** suivre mes offres clients
 
@@ -142,7 +142,7 @@
 - Export des données
 
 ### Recherche de Devis
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** rechercher un devis spécifique  
 **Afin de** retrouver rapidement les informations client/projet
 
@@ -155,7 +155,7 @@
 ## 4. Gestion des Factures
 
 ### Création d'une Facture
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** générer une facture depuis un devis accepté  
 **Afin de** demander le paiement au client
 
@@ -166,7 +166,7 @@
 - Conditions de paiement configurables
 
 ### Édition d'une Facture
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** modifier une facture existante  
 **Afin de** corriger des erreurs avant envoi
 
@@ -177,9 +177,9 @@
 - Recalcul automatique
 
 ### Suppression d'une Facture
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** supprimer une facture invalide  
-**Afin d'** éviter la confusion
+**Afin d'**éviter la confusion
 
 **Critères d'Acceptation :**
 - Confirmation obligatoire
@@ -188,7 +188,7 @@
 - Suppression en < 1 seconde
 
 ### Affichage des Factures
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** voir toutes mes factures  
 **Afin de** suivre les paiements
 
@@ -199,7 +199,7 @@
 - Export possible
 
 ### Recherche de Facture
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** chercher une facture par numéro/client  
 **Afin de** gérer efficacement les paiements
 
@@ -212,7 +212,7 @@
 ## 5. Gestion des Dépenses
 
 ### Saisie des Dépenses
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** enregistrer les dépenses  
 **Afin de** suivre les coûts opérationnels
 
@@ -223,7 +223,7 @@
 - Validation en temps réel
 
 ### Édition d'une Dépense
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** modifier une dépense existante  
 **Afin de** corriger les montants/catégories
 
@@ -234,7 +234,7 @@
 - Recalcul automatique
 
 ### Suppression d'une Dépense
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** supprimer une dépense  
 **Afin de** maintenir des comptes exacts
 
@@ -245,7 +245,7 @@
 - Traçabilité
 
 ### Affichage des Dépenses
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** voir toutes les dépenses  
 **Afin d'**avoir une vue d'ensemble des coûts
 
@@ -258,7 +258,7 @@
 ## 6. Gestion du Portefeuille Client
 
 ### Ajout d'un Client
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** ajouter un nouveau client  
 **Afin de** créer facilement des devis pour lui
 
@@ -269,7 +269,7 @@
 - Import depuis vCard
 
 ### Édition d'un Client
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** modifier les infos client  
 **Afin de** les maintenir à jour
 
@@ -280,7 +280,7 @@
 - Validation données
 
 ### Suppression d'un Client
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** supprimer un client inactif  
 **Afin de** nettoyer mon portefeuille
 
@@ -291,7 +291,7 @@
 - Conservation historique
 
 ### Affichage du Portefeuille
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** voir tous mes clients  
 **Afin de** gérer efficacement les relations
 
@@ -302,7 +302,7 @@
 - Export possible
 
 ### Contact Client
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** contacter rapidement un client  
 **Afin de** communiquer efficacement
 
@@ -315,7 +315,7 @@
 ## 7. Dashboard Financier
 
 ### Vue d'Ensemble
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** voir mes indicateurs financiers  
 **Afin de** suivre la santé de mon entreprise
 
@@ -326,7 +326,7 @@
 - Export des rapports
 
 ### KPIs
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** suivre mes indicateurs clés  
 **Afin d'**organiser mon activité
 
@@ -337,7 +337,7 @@
 - Personnalisation affichage
 
 ### Raccourcis
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** des accès rapides  
 **Afin de** gagner en productivité
 
@@ -350,7 +350,7 @@
 ## 8. Notifications et Rappels
 
 ### Rappels de Paiement
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** être notifié des impayés  
 **Afin de** relancer les clients
 
@@ -361,7 +361,7 @@
 - Historique des relances
 
 ### Alertes Dépenses
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** être alerté des dépassements  
 **Afin de** contrôler les coûts
 
@@ -374,7 +374,7 @@
 ## 9. Exportation et Impression
 
 ### Export Documents
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** exporter en PDF  
 **Afin de** partager professionnellement
 
@@ -385,7 +385,7 @@
 - Signature numérique
 
 ### Impression
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** imprimer mes documents  
 **Afin d'**avoir des copies physiques
 
@@ -398,7 +398,7 @@
 ## 10. Sécurité et Confidentialité
 
 ### Gestion Mot de Passe
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** gérer mon mot de passe  
 **Afin de** sécuriser mon compte
 
@@ -409,7 +409,7 @@
 - Historique des changements
 
 ### Récupération Compte
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** récupérer mon accès  
 **Afin de** ne pas perdre mes données
 
@@ -422,7 +422,7 @@
 ## 11. Paramètres Application
 
 ### Personnalisation Documents
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** personnaliser mes documents  
 **Afin de** renforcer mon image de marque
 
@@ -433,7 +433,7 @@
 - Preview en temps réel
 
 ### Gestion des Taxes
-**En tant qu'**utilisateur  
+**En tant qu'utilisateur**  
 **Je veux** configurer les taxes  
 **Afin d'**avoir des calculs conformes
 
@@ -465,3 +465,6 @@
 - Monitoring 24/7
 - Plan de reprise
 - Support multi-devices
+
+# Sources
+[Vue d'ensemble du Projet](https://github.com/YohanF1245/pigeon-devis-2/issues/11)
