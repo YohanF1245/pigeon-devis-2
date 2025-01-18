@@ -20,7 +20,7 @@
 | id | UUID | 36 | Identifiant unique | Clé primaire |
 | user_id | UUID | 36 | ID de l'utilisateur | FK User, Required |
 | unique_link | UUID | 36 | Lien unique de réinitialisation | Required, Auto |
-| expires_at | TIMESTAMPTZ | - | Date d'expiration | Required, Default +24h |
+| expires_at | TIMESTAMPTZ | - | Date d'expiration | Required, Default +1h |
 | created_at | TIMESTAMPTZ | - | Date de création | Auto |
 
 ## Adresse (Address)
