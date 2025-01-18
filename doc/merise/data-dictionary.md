@@ -75,7 +75,7 @@
 | status | ENUM | - | Émis/Accepté | Required (B.R. 44) |
 | discount | DECIMAL | 5,2 | Remise en % | Optional (B.R. 43) |
 | expiration_date | DATE | - | Date d'expiration | Required (B.R. 45) |
-| delivery_time | VARCHAR | 50 | Délai de livraison | Required (B.R. 46) |
+| delivery_time | INTEGER | - | Délai de livraison en jours | Required (B.R. 46) |
 | created_at | TIMESTAMPTZ | - | Date de création | Required (B.R. 42) |
 | updated_at | TIMESTAMPTZ | - | Date de modification | Auto |
 
