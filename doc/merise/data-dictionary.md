@@ -108,7 +108,7 @@
 | business_id | UUID | 36 | ID de l'entreprise | FK Business |
 | title | VARCHAR | 255 | Titre | Required (B.R. 63) |
 | amount | DECIMAL | 10,2 | Montant | Required (B.R. 64) |
-| date | DATE | - | Date de la dépense | Required (B.R. 65) |
+| expense_date | DATE | - | Date de la dépense | Required (B.R. 65) |
 | created_at | TIMESTAMPTZ | - | Date de création | Auto |
 | updated_at | TIMESTAMPTZ | - | Date de modification | Auto |
 
