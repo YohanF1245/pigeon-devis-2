@@ -3,7 +3,7 @@
 ## Utilisateur (User)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| user_id | UUID | 36 | Identifiant unique | Clé primaire |
 | email | VARCHAR | 255 | Adresse email | Unique, Required (B.R. 2, 3) |
 | password | VARCHAR | 255 | Mot de passe hashé | Required (B.R. 4) |
 | first_name | VARCHAR | 50 | Prénom | Required (B.R. 14) |
@@ -15,7 +15,7 @@
 ## Réinitialisation de mot de passe (PasswordResetLink)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| reset_link_id | UUID | 36 | Identifiant unique | Clé primaire |
 | user_id | UUID | 36 | ID de l'utilisateur | FK User, Required |
 | unique_link | UUID | 36 | Lien unique de réinitialisation | Required, Auto |
 | expires_at | TIMESTAMPTZ | - | Date d'expiration | Required, Default +1h |
@@ -24,7 +24,7 @@
 ## Adresse (Address)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| address_id | UUID | 36 | Identifiant unique | Clé primaire |
 | street_number | VARCHAR | 10 | Numéro de rue | Required (B.R. 21) |
 | street_name | VARCHAR | 255 | Nom de rue | Required (B.R. 22) |
 | zip_code | VARCHAR | 10 | Code postal | Required (B.R. 23) |
@@ -34,7 +34,7 @@
 ## Entreprise (Business)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| business_id | UUID | 36 | Identifiant unique | Clé primaire |
 | owner_id | UUID | 36 | ID du propriétaire | FK User (B.R. 27) |
 | siret | VARCHAR | 14 | Numéro SIRET | Required, Unique (B.R. 28) |
 | ape_code | VARCHAR | 5 | Code APE | Required (B.R. 29) |
@@ -45,7 +45,7 @@
 ## Prestation (Performance)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| performance_id | UUID | 36 | Identifiant unique | Clé primaire |
 | business_id | UUID | 36 | ID de l'entreprise | FK Business (B.R. 34) |
 | name | VARCHAR | 255 | Nom de la prestation | Required |
 | description | TEXT | - | Description | Optional |
@@ -56,7 +56,7 @@
 ## Client (Customer)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| customer_id | UUID | 36 | Identifiant unique | Clé primaire |
 | business_id | UUID | 36 | ID de l'entreprise | FK Business |
 | type | ENUM | - | Professionnel/Particulier | Required (B.R. 48) |
 | business_name | VARCHAR | 255 | Nom de l'entreprise | Required if Pro (B.R. 49) |
@@ -69,7 +69,7 @@
 ## Devis (Estimate)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| estimate_id | UUID | 36 | Identifiant unique | Clé primaire |
 | business_id | UUID | 36 | ID de l'entreprise | FK Business |
 | customer_id | UUID | 36 | ID du client | FK Customer (B.R. 41) |
 | status | ENUM | - | Émis/Accepté | Required (B.R. 44) |
@@ -82,7 +82,7 @@
 ## Ligne de Devis (EstimateLine)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| estimate_line_id | UUID | 36 | Identifiant unique | Clé primaire |
 | estimate_id | UUID | 36 | ID du devis | FK Estimate |
 | performance_id | UUID | 36 | ID de la prestation | FK Performance (B.R. 39) |
 | quantity | INTEGER | - | Quantité | Required |
@@ -92,7 +92,7 @@
 ## Facture (Invoice)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| invoice_id | UUID | 36 | Identifiant unique | Clé primaire |
 | estimate_id | UUID | 36 | ID du devis | FK Estimate (B.R. 56) |
 | status | ENUM | - | Émise/Payée | Required (B.R. 57) |
 | surcharge | DECIMAL | 10,2 | Majoration | Default 0 (B.R. 58) |
@@ -104,7 +104,7 @@
 ## Dépense (Expense)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
-| id | UUID | 36 | Identifiant unique | Clé primaire |
+| expense_id | UUID | 36 | Identifiant unique | Clé primaire |
 | business_id | UUID | 36 | ID de l'entreprise | FK Business |
 | title | VARCHAR | 255 | Titre | Required (B.R. 63) |
 | amount | DECIMAL | 10,2 | Montant | Required (B.R. 64) |
