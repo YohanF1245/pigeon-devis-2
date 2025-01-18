@@ -14,15 +14,15 @@
 | created_at | TIMESTAMP | - | Date de création | Auto |
 | updated_at | TIMESTAMP | - | Date de modification | Auto |
 
-## Réinitialisation de mot de passe (PasswordReset)
+## Réinitialisation de mot de passe (PasswordResetLink)
 | Champ | Type | Taille | Description | Règle |
 |-------|------|---------|-------------|--------|
 | id | UUID | 36 | Identifiant unique | Clé primaire |
 | user_id | UUID | 36 | ID de l'utilisateur | FK User, Required |
-| reset_token | VARCHAR | 255 | Token de réinitialisation | Required, Unique |
-| created_at | TIMESTAMP | - | Date de création | Required |
-| expires_at | TIMESTAMP | - | Date d'expiration | Required |
-| is_used | BOOLEAN | - | Token utilisé | Default false |
+| unique_link | UUID | 36 | Lien unique de réinitialisation | Required, Auto |
+| expires_at | TIMESTAMPTZ | - | Date d'expiration | Required, Default +24h |
+| used_at | TIMESTAMPTZ | - | Date d'utilisation | Optional |
+| created_at | TIMESTAMPTZ | - | Date de création | Auto |
 
 ## Adresse (Address)
 | Champ | Type | Taille | Description | Règle |
