@@ -11,8 +11,6 @@
 | phone | VARCHAR | 15 | Numéro de téléphone | Optional (B.R. 17) |
 | signature_path | VARCHAR | 255 | Chemin du fichier signature | Optional (B.R. 20) |
 | is_verified | BOOLEAN | - | Compte vérifié | Default false (B.R. 5) |
-| created_at | TIMESTAMP | - | Date de création | Auto |
-| updated_at | TIMESTAMP | - | Date de modification | Auto |
 
 ## Réinitialisation de mot de passe (PasswordResetLink)
 | Champ | Type | Taille | Description | Règle |
@@ -32,8 +30,6 @@
 | zip_code | VARCHAR | 10 | Code postal | Required (B.R. 23) |
 | city | VARCHAR | 100 | Ville | Required (B.R. 24) |
 | complement | VARCHAR | 255 | Complément d'adresse | Optional (B.R. 25) |
-| created_at | TIMESTAMP | - | Date de création | Auto |
-| updated_at | TIMESTAMP | - | Date de modification | Auto |
 
 ## Entreprise (Business)
 | Champ | Type | Taille | Description | Règle |
@@ -45,8 +41,6 @@
 | tax_code | VARCHAR | 50 | Code fiscal | Required (B.R. 30) |
 | logo_path | VARCHAR | 255 | Chemin du fichier logo | Optional (B.R. 31) |
 | address_id | UUID | 36 | Adresse de l'entreprise | FK Address |
-| created_at | TIMESTAMP | - | Date de création | Auto |
-| updated_at | TIMESTAMP | - | Date de modification | Auto |
 
 ## Prestation (Performance)
 | Champ | Type | Taille | Description | Règle |
@@ -58,8 +52,6 @@
 | price | DECIMAL | 10,2 | Prix HT | Required (B.R. 35) |
 | tax_rate | DECIMAL | 5,2 | Taux de TVA | Required (B.R. 37) |
 | type | ENUM | - | Type de prestation (SERVICE/PRODUIT) | Required (B.R. 33) |
-| created_at | TIMESTAMP | - | Date de création | Auto |
-| updated_at | TIMESTAMP | - | Date de modification | Auto |
 
 ## Client (Customer)
 | Champ | Type | Taille | Description | Règle |
@@ -73,8 +65,6 @@
 | email | VARCHAR | 255 | Email | Optional (B.R. 52) |
 | phone | VARCHAR | 15 | Téléphone | Optional (B.R. 53) |
 | address_id | UUID | 36 | Adresse | FK Address, Optional (B.R. 54) |
-| created_at | TIMESTAMP | - | Date de création | Auto |
-| updated_at | TIMESTAMP | - | Date de modification | Auto |
 
 ## Devis (Estimate)
 | Champ | Type | Taille | Description | Règle |
@@ -86,8 +76,8 @@
 | discount | DECIMAL | 5,2 | Remise en % | Optional (B.R. 43) |
 | expiration_date | DATE | - | Date d'expiration | Required (B.R. 45) |
 | delivery_time | VARCHAR | 50 | Délai de livraison | Required (B.R. 46) |
-| created_at | TIMESTAMP | - | Date de création | Required (B.R. 42) |
-| updated_at | TIMESTAMP | - | Date de modification | Auto |
+| created_at | TIMESTAMPTZ | - | Date de création | Required (B.R. 42) |
+| updated_at | TIMESTAMPTZ | - | Date de modification | Auto |
 
 ## Ligne de Devis (EstimateLine)
 | Champ | Type | Taille | Description | Règle |
@@ -95,10 +85,9 @@
 | id | UUID | 36 | Identifiant unique | Clé primaire |
 | estimate_id | UUID | 36 | ID du devis | FK Estimate |
 | performance_id | UUID | 36 | ID de la prestation | FK Performance (B.R. 39) |
-| quantity | INT | - | Quantité | Required |
+| quantity | INTEGER | - | Quantité | Required |
 | unit_price | DECIMAL | 10,2 | Prix unitaire | Required |
 | tax_rate | DECIMAL | 5,2 | Taux de TVA | Required |
-| created_at | TIMESTAMP | - | Date de création | Auto |
 
 ## Facture (Invoice)
 | Champ | Type | Taille | Description | Règle |
@@ -109,8 +98,8 @@
 | surcharge | DECIMAL | 10,2 | Majoration | Default 0 (B.R. 58) |
 | payment_limit | DATE | - | Date limite de paiement | Required (B.R. 59) |
 | payment_date | DATE | - | Date de paiement | Optional (B.R. 60) |
-| created_at | TIMESTAMP | - | Date de création | Required (B.R. 61) |
-| updated_at | TIMESTAMP | - | Date de modification | Auto |
+| created_at | TIMESTAMPTZ | - | Date de création | Required (B.R. 61) |
+| updated_at | TIMESTAMPTZ | - | Date de modification | Auto |
 
 ## Dépense (Expense)
 | Champ | Type | Taille | Description | Règle |
@@ -120,8 +109,8 @@
 | title | VARCHAR | 255 | Titre | Required (B.R. 63) |
 | amount | DECIMAL | 10,2 | Montant | Required (B.R. 64) |
 | date | DATE | - | Date de la dépense | Required (B.R. 65) |
-| created_at | TIMESTAMP | - | Date de création | Auto |
-| updated_at | TIMESTAMP | - | Date de modification | Auto |
+| created_at | TIMESTAMPTZ | - | Date de création | Auto |
+| updated_at | TIMESTAMPTZ | - | Date de modification | Auto |
 
 ## Notes
 - Tous les identifiants sont des UUID pour garantir l'unicité globale

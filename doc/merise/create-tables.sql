@@ -27,9 +27,7 @@ CREATE TABLE addresses (
     street_name VARCHAR(255) NOT NULL,
     zip_code VARCHAR(10) NOT NULL,
     city VARCHAR(100) NOT NULL,
-    complement VARCHAR(255),
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    complement VARCHAR(255)
 );
 
 CREATE TABLE businesses (
@@ -39,9 +37,7 @@ CREATE TABLE businesses (
     ape_code VARCHAR(5) NOT NULL,
     tax_code VARCHAR(50) NOT NULL,
     logo_path VARCHAR(255),
-    address_id UUID NOT NULL REFERENCES addresses(id) ON DELETE RESTRICT,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    address_id UUID NOT NULL REFERENCES addresses(id) ON DELETE RESTRICT
 );
 
 CREATE TYPE performance_type AS ENUM ('SERVICE', 'PRODUCT');
@@ -53,9 +49,7 @@ CREATE TABLE performances (
     description TEXT,
     price DECIMAL(10,2) NOT NULL,
     tax_rate DECIMAL(5,2) NOT NULL,
-    type performance_type NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    type performance_type NOT NULL
 );
 
 CREATE TYPE customer_type AS ENUM ('PROFESSIONAL', 'INDIVIDUAL');
@@ -70,8 +64,6 @@ CREATE TABLE customers (
     email VARCHAR(255),
     phone VARCHAR(15),
     address_id UUID REFERENCES addresses(id) ON DELETE SET NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     CONSTRAINT check_customer_type CHECK (
         (type = 'PROFESSIONAL' AND business_name IS NOT NULL) OR
         (type = 'INDIVIDUAL' AND first_name IS NOT NULL AND last_name IS NOT NULL)
@@ -98,8 +90,7 @@ CREATE TABLE estimate_lines (
     performance_id UUID NOT NULL REFERENCES performances(id) ON DELETE RESTRICT,
     quantity INTEGER NOT NULL,
     unit_price DECIMAL(10,2) NOT NULL,
-    tax_rate DECIMAL(5,2) NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    tax_rate DECIMAL(5,2) NOT NULL
 );
 
 CREATE TYPE invoice_status AS ENUM ('EMITTED', 'PAID');
