@@ -18,7 +18,6 @@ CREATE TABLE password_reset_links (
     user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     unique_link UUID NOT NULL DEFAULT uuid_generate_v4(),
     expires_at TIMESTAMPTZ NOT NULL DEFAULT NOW() + INTERVAL '24 hours',
-    used_at TIMESTAMPTZ,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 

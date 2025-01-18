@@ -21,7 +21,6 @@
 | user_id | UUID | 36 | ID de l'utilisateur | FK User, Required |
 | unique_link | UUID | 36 | Lien unique de réinitialisation | Required, Auto |
 | expires_at | TIMESTAMPTZ | - | Date d'expiration | Required, Default +24h |
-| used_at | TIMESTAMPTZ | - | Date d'utilisation | Optional |
 | created_at | TIMESTAMPTZ | - | Date de création | Auto |
 
 ## Adresse (Address)
