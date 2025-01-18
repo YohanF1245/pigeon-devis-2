@@ -79,7 +79,7 @@ CREATE TABLE estimates (
     status estimate_status NOT NULL DEFAULT 'EMITTED',
     discount DECIMAL(5,2) DEFAULT 0,
     expiration_date DATE NOT NULL,
-    delivery_time VARCHAR(50) NOT NULL,
+    delivery_time INTEGER NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
