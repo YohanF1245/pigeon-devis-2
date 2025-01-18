@@ -1,7 +1,7 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 CREATE TABLE users (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     first_name VARCHAR(50) NOT NULL,
@@ -14,15 +14,15 @@ CREATE TABLE users (
 );
 
 CREATE TABLE password_reset_links (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    reset_link_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
     unique_link UUID NOT NULL DEFAULT uuid_generate_v4(),
     expires_at TIMESTAMPTZ NOT NULL DEFAULT NOW() + INTERVAL '1 hour',
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
 CREATE TABLE addresses (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    address_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     street_number VARCHAR(10) NOT NULL,
     street_name VARCHAR(255) NOT NULL,
     zip_code VARCHAR(10) NOT NULL,
@@ -31,20 +31,20 @@ CREATE TABLE addresses (
 );
 
 CREATE TABLE businesses (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    owner_id UUID NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
+    business_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    owner_id UUID NOT NULL REFERENCES users(user_id) ON DELETE RESTRICT,
     siret VARCHAR(14) NOT NULL UNIQUE,
     ape_code VARCHAR(5) NOT NULL,
     tax_code VARCHAR(50) NOT NULL,
     logo_path VARCHAR(255),
-    address_id UUID NOT NULL REFERENCES addresses(id) ON DELETE RESTRICT
+    address_id UUID NOT NULL REFERENCES addresses(address_id) ON DELETE RESTRICT
 );
 
 CREATE TYPE performance_type AS ENUM ('SERVICE', 'PRODUCT');
 
 CREATE TABLE performances (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    business_id UUID NOT NULL REFERENCES businesses(id) ON DELETE CASCADE,
+    performance_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    business_id UUID NOT NULL REFERENCES businesses(business_id) ON DELETE CASCADE,
     name VARCHAR(255) NOT NULL,
     description TEXT,
     price DECIMAL(10,2) NOT NULL,
@@ -55,15 +55,15 @@ CREATE TABLE performances (
 CREATE TYPE customer_type AS ENUM ('PROFESSIONAL', 'INDIVIDUAL');
 
 CREATE TABLE customers (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    business_id UUID NOT NULL REFERENCES businesses(id) ON DELETE CASCADE,
+    customer_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    business_id UUID NOT NULL REFERENCES businesses(business_id) ON DELETE CASCADE,
     type customer_type NOT NULL,
     business_name VARCHAR(255),
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     email VARCHAR(255),
     phone VARCHAR(15),
-    address_id UUID REFERENCES addresses(id) ON DELETE SET NULL,
+    address_id UUID REFERENCES addresses(address_id) ON DELETE SET NULL,
     CONSTRAINT check_customer_type CHECK (
         (type = 'PROFESSIONAL' AND business_name IS NOT NULL) OR
         (type = 'INDIVIDUAL' AND first_name IS NOT NULL AND last_name IS NOT NULL)
@@ -73,9 +73,9 @@ CREATE TABLE customers (
 CREATE TYPE estimate_status AS ENUM ('EMITTED', 'ACCEPTED');
 
 CREATE TABLE estimates (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    business_id UUID NOT NULL REFERENCES businesses(id) ON DELETE RESTRICT,
-    customer_id UUID NOT NULL REFERENCES customers(id) ON DELETE RESTRICT,
+    estimate_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    business_id UUID NOT NULL REFERENCES businesses(business_id) ON DELETE RESTRICT,
+    customer_id UUID NOT NULL REFERENCES customers(customer_id) ON DELETE RESTRICT,
     status estimate_status NOT NULL DEFAULT 'EMITTED',
     discount DECIMAL(5,2) DEFAULT 0,
     expiration_date DATE NOT NULL,
@@ -85,9 +85,9 @@ CREATE TABLE estimates (
 );
 
 CREATE TABLE estimate_lines (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    estimate_id UUID NOT NULL REFERENCES estimates(id) ON DELETE CASCADE,
-    performance_id UUID NOT NULL REFERENCES performances(id) ON DELETE RESTRICT,
+    estimate_line_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    estimate_id UUID NOT NULL REFERENCES estimates(estimate_id) ON DELETE CASCADE,
+    performance_id UUID NOT NULL REFERENCES performances(performance_id) ON DELETE RESTRICT,
     quantity INTEGER NOT NULL,
     unit_price DECIMAL(10,2) NOT NULL,
     tax_rate DECIMAL(5,2) NOT NULL
@@ -96,8 +96,8 @@ CREATE TABLE estimate_lines (
 CREATE TYPE invoice_status AS ENUM ('EMITTED', 'PAID');
 
 CREATE TABLE invoices (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    estimate_id UUID NOT NULL REFERENCES estimates(id) ON DELETE RESTRICT,
+    invoice_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    estimate_id UUID NOT NULL REFERENCES estimates(estimate_id) ON DELETE RESTRICT,
     status invoice_status NOT NULL DEFAULT 'EMITTED',
     surcharge DECIMAL(10,2) DEFAULT 0,
     payment_limit DATE NOT NULL,
@@ -107,8 +107,8 @@ CREATE TABLE invoices (
 );
 
 CREATE TABLE expenses (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    business_id UUID NOT NULL REFERENCES businesses(id) ON DELETE CASCADE,
+    expense_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    business_id UUID NOT NULL REFERENCES businesses(business_id) ON DELETE CASCADE,
     title VARCHAR(255) NOT NULL,
     amount DECIMAL(10,2) NOT NULL,
     date DATE NOT NULL,
